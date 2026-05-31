@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase 실시간 메모장</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 나의 메모장</h1>
+        
+        <form id="memo-form">
+            <input type="text" id="memo-title" placeholder="제목을 입력하세요..." required>
+            <textarea id="memo-content" placeholder="내용을 입력하세요..." rows="5" required></textarea>
+            <div class="form-buttons">
+                <button type="submit" id="submit-btn">메모 저장</button>
+                <button type="button" id="cancel-btn" class="hidden">수정 취소</button>
+            </div>
+        </form>
+
+        <div id="memo-list">
+            <p class="loading">메모를 불러오는 중입니다...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
